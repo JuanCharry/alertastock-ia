@@ -7,7 +7,7 @@ La aplicación principal trabaja con los productos y ventas registrados en Alert
 1. El usuario registra productos y ventas normalmente.
 2. Las ventas se guardan en Room y se sincronizan con Firestore en `usuarios/{uid}/ventas`.
 3. Al pulsar **Analizar con IA**, la app reconstruye las últimas 8 semanas del producto desde Room.
-4. Calcula `lag_1` a `lag_4`, promedios móviles de 4 y 8 semanas y tendencia de 4 semanas.
+3. Al pulsar **Analizar con IA**, la app reconstruye las últimas 8 semanas del producto utilizando el historial disponible en Room y Firestore.
 5. Envía esas variables, categoría, stock actual y stock mínimo al backend FastAPI.
 6. El backend carga `modelo_alertastock_regresion.pkl`, estima la demanda y aplica las reglas de riesgo y reposición.
 7. La app muestra demanda estimada, riesgo BAJO/MEDIO/ALTO y reposición sugerida.
