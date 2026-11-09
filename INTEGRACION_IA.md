@@ -22,35 +22,39 @@ Para evitar presentar como confiable una predicción de un producto sin datos su
 
 ## Backend
 
-Desde `backend_ia`:
-
-```bash
 El backend de AlertaStock está desarrollado con FastAPI.
 
-La instancia pública utilizada para la demostración está desplegada en Render.
+Para ejecutarlo localmente desde `backend_ia`:
+
+```bash
+pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+Para la integración y demostración final se desplegó una instancia pública en Render.
 
 Endpoints principales:
 
-- Documentación interactiva:
-  https://alertastock-ia-backend.onrender.com/docs
+- Documentación interactiva:  
+  `https://alertastock-ia-backend.onrender.com/docs`
 
-- Verificación del servicio:
-  https://alertastock-ia-backend.onrender.com/health
+- Verificación del servicio:  
+  `https://alertastock-ia-backend.onrender.com/health`
 
-- Predicción:
-  POST /predecir
+- Predicción:  
+  `POST /predecir`
 
 La aplicación Android utiliza como URL base:
 
-https://alertastock-ia-backend.onrender.com/
+`https://alertastock-ia-backend.onrender.com/`
 
-y realiza las solicitudes al endpoint `/predecir`.
+y realiza las solicitudes de predicción al endpoint `/predecir`.
 
-El plan gratuito de Render puede suspender temporalmente el servicio después de un periodo de inactividad, por lo que la primera consulta puede tardar mientras el backend se reactiva.
-```
+La URL base por sí sola no corresponde a una página de la aplicación y puede responder `{"detail":"Not Found"}`, ya que el backend no define una ruta `/`. Para comprobar que el servicio está funcionando se debe utilizar `/health` o `/docs`.
 
-En Android Emulator la URL configurada es `http://10.0.2.2:8000/`.
-Para celular físico se debe cambiar `IA_BASE_URL` en `app/build.gradle.kts` por la IP LAN del computador que ejecute FastAPI.
+El despliegue utilizado corresponde al plan gratuito de Render. Después de un periodo de inactividad el servicio puede entrar en reposo, por lo que la primera consulta puede tardar mientras el backend se reactiva. Por esta razón, este despliegue se utiliza como infraestructura de demostración del prototipo y no como una infraestructura definitiva de producción.
+
+El cliente Android utiliza un tiempo de espera ampliado para tolerar este tiempo de reactivación.
 
 
 ## Historial cargado en Firestore para pruebas
