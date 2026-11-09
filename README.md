@@ -10,8 +10,8 @@ Proyecto académico de gestión predictiva de inventarios. La aplicación Androi
 4. **Modelo de regresión**: predicción de demanda a partir de variables temporales y categoría.
 5. **Render**: despliegue público del backend.
 
-Backend público:
-https://alertastock-ia-backend.onrender.com
+Verificación del backend:
+https://alertastock-ia-backend.onrender.com/health
 
 Documentación interactiva de la API:
 https://alertastock-ia-backend.onrender.com/docs
@@ -68,4 +68,8 @@ En el plan gratuito de Render, la primera petición después de un periodo de in
 
 ## Seguridad
 
-No se incluyen claves privadas de Firebase Admin ni archivos de cuenta de servicio. Esas credenciales nunca deben subirse a GitHub.
+No se incluyen claves privadas de Firebase Admin ni archivos de cuenta de servicio.
+
+El archivo `google-services.json` no se versiona en este repositorio y debe agregarse localmente en `app/` para conectar la aplicación con el proyecto de Firebase correspondiente.
+
+Las credenciales privadas nunca deben subirse a GitHub.
