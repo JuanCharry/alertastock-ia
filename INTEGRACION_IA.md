@@ -25,8 +25,28 @@ Para evitar presentar como confiable una predicción de un producto sin datos su
 Desde `backend_ia`:
 
 ```bash
-pip install -r requirements.txt
-uvicorn main:app --host 0.0.0.0 --port 8000
+El backend de AlertaStock está desarrollado con FastAPI.
+
+La instancia pública utilizada para la demostración está desplegada en Render.
+
+Endpoints principales:
+
+- Documentación interactiva:
+  https://alertastock-ia-backend.onrender.com/docs
+
+- Verificación del servicio:
+  https://alertastock-ia-backend.onrender.com/health
+
+- Predicción:
+  POST /predecir
+
+La aplicación Android utiliza como URL base:
+
+https://alertastock-ia-backend.onrender.com/
+
+y realiza las solicitudes al endpoint `/predecir`.
+
+El plan gratuito de Render puede suspender temporalmente el servicio después de un periodo de inactividad, por lo que la primera consulta puede tardar mientras el backend se reactiva.
 ```
 
 En Android Emulator la URL configurada es `http://10.0.2.2:8000/`.
