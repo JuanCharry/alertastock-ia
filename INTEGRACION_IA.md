@@ -1,6 +1,6 @@
 # Integración de IA en AlertaStock
 
-La aplicación principal usa datos reales registrados en AlertaStock. No existe un modo demo separado.
+La aplicación principal trabaja con los productos y ventas registrados en AlertaStock. Para las pruebas académicas de integración se precargó un historial controlado de ventas en Firestore. No existe un modo demo separado.
 
 ## Flujo
 
