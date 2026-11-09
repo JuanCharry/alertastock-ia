@@ -6,7 +6,7 @@ Proyecto configurado:
 - Project Number: `180510941808`
 - Package Android: `com.alertastock`
 
-El archivo `app/google-services.json` corresponde a ese proyecto.
+El archivo `app/google-services.json` debe descargarse desde Firebase Console y colocarse localmente en la carpeta `app/`. Este archivo no se versiona en el repositorio público.
 
 ## Estructura recomendada de Firestore
 
