@@ -1,0 +1,28 @@
+# Android Studio / IntelliJ
+.idea/
+*.iml
+.gradle/
+.kotlin/
+local.properties
+
+# Build outputs
+build/
+**/build/
+*.apk
+*.aab
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Firebase Admin credentials / secrets
+*firebase-adminsdk*.json
+*serviceAccount*.json
+service-account*.json
+
+# OS
+.DS_Store
+Thumbs.db

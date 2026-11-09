@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/productosFragment"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="Productos"/>
+    <item
+        android:id="@+id/scannerFragment"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Escanear"/>
+    <item
+        android:id="@+id/alertasFragment"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="Alertas"/>
+</menu>

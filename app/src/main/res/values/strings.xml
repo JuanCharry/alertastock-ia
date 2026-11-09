@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">AlertaStock</string>
+    <string name="btn_atras">Atrás</string>
+    <string name="content_desc_logo">Logo AlertaStock</string>
+    <string name="otp_digito_1">Dígito 1</string>
+    <string name="otp_digito_2">Dígito 2</string>
+    <string name="otp_digito_3">Dígito 3</string>
+    <string name="otp_digito_4">Dígito 4</string>
+    <string name="otp_digito_5">Dígito 5</string>
+    <string name="otp_digito_6">Dígito 6</string>
+    <string name="default_web_client_id">1094436307620-fvcb3q7qgguoo01q5pv9ja2drsabod02.apps.googleusercontent.com</string>
+
+    <!-- Errores de autenticación -->
+    <string name="error_campos_vacios">Completa todos los campos</string>
+    <string name="error_email_vacio">Ingresa tu correo electrónico</string>
+    <string name="error_email_invalido">El correo electrónico no es válido</string>
+    <string name="error_contrasena_vacia">Ingresa tu contraseña</string>
+    <string name="error_contrasena_corta">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_contrasena_incorrecta">Contraseña incorrecta</string>
+    <string name="error_usuario_no_existe">No existe una cuenta con este correo</string>
+    <string name="error_correo_en_uso">Este correo ya tiene una cuenta registrada</string>
+    <string name="error_sin_internet">Sin conexión a internet</string>
+    <string name="error_nombre_vacio">Ingresa tu nombre completo</string>
+    <string name="error_credenciales_invalidas">Correo o contraseña incorrectos</string>
+
+    <!-- Login -->
+    <string name="login_subtitulo">Ingresa a tu cuenta</string>
+    <string name="label_email">Correo electrónico</string>
+    <string name="label_contrasena">Contraseña</string>
+    <string name="txt_olvide_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="btn_ingresar">Ingresar</string>
+    <string name="txt_separador">— o continúa con —</string>
+    <string name="btn_google">Continuar con Google</string>
+    <string name="txt_ir_registro">¿No tienes cuenta? Regístrate</string>
+
+    <!-- Registro -->
+    <string name="registro_titulo">Crear cuenta</string>
+    <string name="registro_subtitulo">Ingresa tus datos para registrarte</string>
+    <string name="label_nombre">Nombre completo</string>
+    <string name="label_negocio">Nombre del negocio</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    <string name="txt_terminos">Al registrarte aceptas los Términos y condiciones</string>
+    <string name="fortaleza_fuerte">Contraseña fuerte</string>
+    <string name="fortaleza_media">Contraseña media</string>
+    <string name="fortaleza_debil">Contraseña débil</string>
+    <string name="fortaleza_vacia">Ingresa una contraseña</string>
+
+    <!-- Verificar correo -->
+    <string name="verificar_titulo">Revisa tu correo</string>
+    <string name="verificar_subtitulo">Enviamos un enlace de verificación a</string>
+    <string name="verificar_info">Haz clic en el enlace del correo para activar tu cuenta. Revisa también la carpeta de spam</string>
+    <string name="btn_ya_verifique">Ya verifiqué mi correo</string>
+    <string name="btn_reenviar">Reenviar correo</string>
+    <string name="txt_cambiar_correo">¿Correo incorrecto? Cambiar correo</string>
+    <string name="msg_correo_reenviado">Correo reenviado correctamente</string>
+    <string name="msg_no_verificado">Aún no has verificado tu correo</string>
+
+    <!-- Cuenta creada -->
+    <string name="cuenta_creada_subtitulo">Tu cuenta en AlertaStock ha sido creada exitosamente</string>
+    <string name="badge_correo_verificado">✓ Correo verificado</string>
+    <string name="badge_cuenta_activa">✓ Cuenta activa</string>
+    <string name="txt_que_hacer">¿Qué quieres hacer primero?</string>
+    <string name="btn_ir_dashboard">Ir al Dashboard</string>
+    <string name="btn_agregar_producto">Agregar mi primer producto</string>
+
+    <!-- Olvidé contraseña -->
+    <string name="olvide_titulo">¿Olvidaste tu contraseña?</string>
+    <string name="olvide_subtitulo">Ingresa tu correo y te enviaremos un enlace para restablecer tu contraseña</string>
+    <string name="olvide_info">Te enviaremos un correo para restablecer tu contraseña</string>
+    <string name="btn_enviar_correo">Enviar correo</string>
+    <string name="msg_correo_enviado">✓ Correo enviado. Revisa tu bandeja de entrada</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_resumen">RESUMEN GENERAL</string>
+    <string name="dashboard_acceso">ACCESO RÁPIDO</string>
+    <string name="tarjeta_total">Productos totales</string>
+    <string name="tarjeta_agotarse">Por agotarse</string>
+    <string name="tarjeta_vencer">Por vencer</string>
+    <string name="tarjeta_buen_estado">En buen estado</string>
+    <string name="acceso_productos">Productos</string>
+    <string name="acceso_escanear">Escanear</string>
+    <string name="acceso_alertas">Alertas</string>
+    <string name="acceso_configurar">Configurar</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="error_generico">Ocurrió un error. Intenta de nuevo</string>
+    <string name="saludo_manana">Buenos días,</string>
+    <string name="saludo_tarde">Buenas tardes,</string>
+    <string name="saludo_noche">Buenas noches,</string>
+</resources>
