@@ -13,8 +13,19 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 - Salud: `GET /health`
 - Predicción: `POST /predecir`
 
-El Android Emulator usa `http://10.0.2.2:8000/` para conectarse al computador anfitrión.
-En un teléfono físico se debe cambiar `IA_BASE_URL` en `app/build.gradle.kts` por la IP LAN del computador y ambos deben estar en la misma red.
+La versión final de la aplicación Android utiliza el backend público desplegado en Render:
+
+`https://alertastock-ia-backend.onrender.com/`
+
+Endpoints disponibles:
+
+- Salud: `GET /health`
+- Predicción: `POST /predecir`
+- Documentación interactiva: `/docs`
+
+El despliegue corresponde al plan gratuito de Render, por lo que la primera solicitud después de un periodo de inactividad puede tardar mientras el servicio se reactiva.
+
+Para desarrollo también es posible ejecutar el backend localmente con Uvicorn.
 
 ## Reentrenar
 
