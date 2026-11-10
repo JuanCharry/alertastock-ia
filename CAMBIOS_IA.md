@@ -1,30 +1,29 @@
 # Cambios realizados para la entrega final
 
-- Firebase actualizado a `alertastock-bb0ec`.
-- Retrofit + Gson + OkHttp añadidos para conectar Android con FastAPI.
-- Backend FastAPI incluido en `backend_ia/`.
-- Modelo final `modelo_alertastock_regresion.pkl` incluido.
-- Dataset V2 y script de reentrenamiento incluidos como evidencia del entrenamiento.
-- Ventas de Firestore movidas al esquema `usuarios/{uid}/ventas`.
-- Cada ítem vendido en Firestore conserva `productoId` para reconstruir historiales.
-- Cálculo en Android de rezagos, promedios móviles y tendencia desde las ventas reales guardadas en Room.
-- Botón único **Analizar con IA** en la pantalla de productos.
-- Resultado visible: demanda estimada, riesgo BAJO/MEDIO/ALTO y reposición sugerida.
-- Si el historial es insuficiente, la app lo informa en lugar de inventar datos.
-- No existe un modo demo separado ni se cargan datos sintéticos en Firebase/Room.
+- Se actualizó la conexión de Firebase al proyecto `alertastock-bb0ec`.
+- Se integró Retrofit, Gson y OkHttp para conectar la aplicación Android con el backend en FastAPI.
+- Se incluyó el backend dentro de `backend_ia/`.
+- Se agregó el modelo final `modelo_alertastock_regresion.pkl`, junto con el dataset V2 y el script de reentrenamiento.
+- Las ventas de Firestore se organizaron bajo `usuarios/{uid}/ventas`.
+- Se ajustó el historial usado por la IA para tomar información desde Room y Firestore.
+- Se agregó la opción **Analizar con IA** en la pantalla de productos.
+- La aplicación muestra demanda estimada, nivel de riesgo y reposición sugerida.
+- Cuando no hay suficiente historial, la aplicación informa que no puede generar una predicción confiable.
+- Para las pruebas se cargó en Firestore un historial controlado de ventas. Este historial es diferente al dataset sintético usado para entrenar el modelo.
 
-## Stock mínimo recomendado dinámico
-- El modelo de regresión sigue prediciendo la demanda; no se reentrenó.
-- Se añadió un stock mínimo recomendado (punto de reposición) calculado como demanda predicha + margen de seguridad.
-- El margen de seguridad usa 1.65 × desviación estándar poblacional de las últimas 4 semanas, aproximando un nivel de servicio unilateral del 95 %.
-- El riesgo y la reposición ahora usan ese mínimo dinámico, mientras el stock mínimo manual del producto se conserva como referencia operativa editable.
-- La reposición sugerida es `max(stock_minimo_recomendado - stockActual, 0)`.
+## Stock mínimo recomendado
 
-## Estado de inventario guiado por IA
-- Inventario analiza automaticamente los productos al abrir la pantalla.
-- Cuando existe resultado IA, la tarjeta usa `stock_minimo_recomendado` y `riesgo` para el texto, la barra y el indicador de color.
-- Colores: ALTO=rojo, MEDIO=amarillo, BAJO=verde.
-- Si aun no existe analisis valido, se conserva `stockMinimo` manual solo como respaldo visual.
-- Los filtros visibles se presentan como Riesgo alto / Riesgo medio / Riesgo bajo.
-- Backend publico: https://alertastock-ia-backend.onrender.com/
-- Timeouts HTTP ampliados a 120 s para tolerar el arranque en frio de Render.
+- El modelo de regresión continúa prediciendo únicamente la demanda.
+- A partir de esa predicción se calcula un stock mínimo recomendado con un margen de seguridad basado en la variabilidad reciente.
+- El riesgo y la reposición sugerida se calculan usando ese stock mínimo recomendado.
+- La reposición se calcula como:
+
+`max(stock_minimo_recomendado - stockActual, 0)`
+
+## Inventario guiado por IA
+
+- La pantalla de inventario analiza automáticamente los productos que tienen historial suficiente.
+- Las tarjetas muestran el riesgo ALTO, MEDIO o BAJO.
+- El stock mínimo recomendado por IA se muestra junto al stock actual.
+- Si todavía no hay un análisis válido, se conserva temporalmente el stock mínimo manual.
+- El backend utilizado para la demostración está desplegado en Render.
