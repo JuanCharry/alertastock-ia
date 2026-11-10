@@ -48,7 +48,7 @@ La aplicación Android utiliza como URL base:
 
 `https://alertastock-ia-backend.onrender.com/`
 
-y realiza las solicitudes de predicción al endpoint `/predecir`.
+y realiza las solicitudes de predicción al endpoint `/predecir`.****
 
 La URL base por sí sola no corresponde a una página de la aplicación y puede responder `{"detail":"Not Found"}`, ya que el backend no define una ruta `/`. Para comprobar que el servicio está funcionando se debe utilizar `/health` o `/docs`.
 
@@ -59,7 +59,7 @@ El cliente Android utiliza un tiempo de espera ampliado para tolerar este tiempo
 
 ## Historial cargado en Firestore para pruebas
 
-La IA consulta el historial combinado de Room y `usuarios/{uid}/ventas` en Firestore. Esto permite precargar ventas academicas de prueba sin insertar filas manualmente en la base local. El vinculo de los registros remotos con el producto se realiza por `codigoBarras` cuando no existe un `productoId` local.
+La IA consulta el historial combinado de Room y `usuarios/{uid}/ventas` en Firestore. Esto permite precargar ventas académicas de prueba sin insertar filas manualmente en la base local. El vínculo de los registros remotos con el producto se realiza por `codigoBarras` cuando no existe un `productoId` local.
 
 ## Stock mínimo recomendado sin reentrenamiento
 La IA principal continúa siendo el modelo de regresión de demanda. Después de la predicción, el backend calcula un punto de reposición dinámico:
